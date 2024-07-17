@@ -19,7 +19,13 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(ZephyrDoom)
 
+file(GLOB doomgeneric_sources doomgeneric/doomgeneric/*.c)
+file(GLOB doomgeneric_headers doomgeneric/doomgeneric/*.h)
+
 target_sources(app PRIVATE
         src/main.cpp
+
+        ${doomgeneric_sources}
+        ${doomgeneric_headers}
 )
 
