@@ -33,3 +33,5 @@
 
 #
 CMakeLists.txt.user
+
+boards/*
